@@ -51,25 +51,36 @@
         </div>
     </nav>
 
-    <header class="relative mt-16 h-[500px] flex items-center justify-center text-center text-white overflow-hidden group">
-        <div class="absolute inset-0 z-0">
-            <img src="logo.jpg" class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" alt="Fábrica BCO">
+    <header class="relative mt-16 h-[550px] flex items-center justify-center text-center text-white overflow-hidden group">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920" 
+             class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" 
+             alt="Fábrica BCO">
+        <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-[2px]"></div>
+    </div>
+    
+    <div class="relative z-20 px-4 max-w-4xl mx-auto flex flex-col items-center">
+        <span class="inline-block py-1 px-3 rounded-full bg-orange-600/20 border border-orange-400/30 text-orange-300 text-[10px] font-bold uppercase tracking-[0.3em] mb-10 backdrop-blur-sm">
+            Catálogo Corporativo 2026
+        </span>
+
+        <div class="mb-8 transform transition-all duration-500 hover:scale-105">
+            <img src="logo.jpg" alt="Logo BCO" class="h-40 md:h-52 w-auto object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
         </div>
-        <div class="absolute inset-0 hero-overlay z-10"></div>
-        
-        <div class="relative z-20 px-4 max-w-4xl mx-auto animate-fade-in-up">
-            <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto font-light">
-                
-                
-                Explore nuestra exhibición de productos manufacturados para el sector industrial y corporativo. Calidad garantizada en cada diseño.
-            </p>
-            <div class="flex gap-4 justify-center">
-                <button onclick="document.getElementById('filter-section').scrollIntoView({behavior: 'smooth'})" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                    Ver Catálogo
-                </button>
-            </div>
+
+        <p class="text-slate-300 text-sm md:text-base mb-10 max-w-xl mx-auto font-light leading-relaxed tracking-wide">
+            Manufactura mexicana de alta calidad para el sector industrial y corporativo. <br>
+            <span class="text-white font-medium italic opacity-80">Excelencia en cada costura.</span>
+        </p>
+
+        <div class="flex justify-center">
+            <button onclick="document.getElementById('filter-section').scrollIntoView({behavior: 'smooth'})" 
+                    class="bg-white text-slate-900 px-10 py-3 rounded-full font-bold hover:bg-orange-600 hover:text-white transition-all duration-300 shadow-xl tracking-widest uppercase text-[10px]">
+                Explorar Catálogo
+            </button>
         </div>
-    </header>
+    </div>
+</header>
 
     <div id="filter-section" class="sticky top-[73px] bg-slate-50/95 backdrop-blur-sm z-40 py-6 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4">
