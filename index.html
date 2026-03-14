@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo Corporativo | Versión Demo</title>
+    <title>Bolsas y Carpetas Ortiz | Catálogo Corporativo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -24,74 +24,56 @@
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
         /* Overlay para el Hero */
-        .hero-overlay { background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.7)); }
+        .hero-overlay { background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.75)); }
+
+        /* Colores de marca basados en el logo BCO */
+        .text-brand-green { color: #009640; }
+        .bg-brand-orange { background-color: #f39231; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 antialiased selection:bg-blue-600 selection:text-white">
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-orange-500 selection:text-white">
 
     <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-slate-100 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="bg-slate-900 text-white w-10 h-10 flex items-center justify-center rounded-lg shadow-lg">
-                    <i class="fa-solid fa-cube text-lg"></i>
+                <div class="w-12 h-12 flex items-center justify-center rounded-lg bg-white overflow-hidden">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/logo.jpg" alt="Logo BCO" class="w-full h-full object-contain" onerror="this.src='https://via.placeholder.com/150?text=BCO'">
                 </div>
                 <div>
-                    <span class="brand-font font-bold text-xl tracking-tight text-slate-900 leading-none block">SOLUCIONES</span>
-                    <span class="text-[10px] font-bold text-blue-600 uppercase tracking-widest leading-none block">Textiles (Demo)</span>
+                    <span class="brand-font font-bold text-xl tracking-tight text-slate-900 leading-none block uppercase">Bolsas y Carpetas Ortiz</span>
+                    <span class="text-[10px] font-bold text-orange-600 uppercase tracking-widest leading-none block">Manufactura de Alta Calidad</span>
                 </div>
             </div>
             <div class="hidden md:flex items-center gap-2 px-4 py-1.5 bg-slate-100 rounded-full border border-slate-200">
-                <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
-                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Modo Visualización</span>
+                <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                <span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Catálogo Activo</span>
             </div>
         </div>
     </nav>
 
     <header class="relative mt-16 h-[500px] flex items-center justify-center text-center text-white overflow-hidden group">
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" alt="Fábrica Textil">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920" class="w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-110" alt="Fábrica BCO">
         </div>
         <div class="absolute inset-0 hero-overlay z-10"></div>
         
         <div class="relative z-20 px-4 max-w-4xl mx-auto animate-fade-in-up">
-            <span class="inline-block py-1 px-3 rounded-full bg-blue-600/20 border border-blue-400/30 text-blue-300 text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
-                Plataforma de Muestra v2.0
+            <span class="inline-block py-1 px-3 rounded-full bg-orange-600/20 border border-orange-400/30 text-orange-300 text-xs font-bold uppercase tracking-widest mb-4 backdrop-blur-sm">
+                Catálogo Corporativo 2026
             </span>
-            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight">
-                Manufactura Textil <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">De Alto Nivel</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight leading-tight uppercase">
+                Bolsas y Carpetas <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300">De Alto Nivel</span>
             </h1>
             <p class="text-slate-300 text-lg mb-8 max-w-2xl mx-auto font-light">
-                Este sitio es una demostración técnica de catálogo interactivo. 
-                Los productos mostrados ilustran la capacidad de filtrado y presentación visual.
+                Explore nuestra exhibición de productos manufacturados para el sector industrial y corporativo. Calidad garantizada en cada diseño.
             </p>
             <div class="flex gap-4 justify-center">
-                <button onclick="document.getElementById('filter-section').scrollIntoView({behavior: 'smooth'})" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                <button onclick="document.getElementById('filter-section').scrollIntoView({behavior: 'smooth'})" class="bg-white text-slate-900 px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition shadow-[0_0_20px_rgba(255,255,255,0.3)]">
                     Ver Catálogo
                 </button>
             </div>
         </div>
     </header>
-
-    <section class="bg-white border-b border-slate-200 py-8">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <div class="flex flex-col items-center gap-2">
-                <i class="fa-solid fa-award text-blue-600 text-2xl"></i>
-                <h5 class="font-bold text-sm uppercase text-slate-700">Calidad Premium</h5>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fa-solid fa-truck-fast text-blue-600 text-2xl"></i>
-                <h5 class="font-bold text-sm uppercase text-slate-700">Envíos Nacionales</h5>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fa-solid fa-palette text-blue-600 text-2xl"></i>
-                <h5 class="font-bold text-sm uppercase text-slate-700">Personalizable</h5>
-            </div>
-            <div class="flex flex-col items-center gap-2">
-                <i class="fa-solid fa-shield-halved text-blue-600 text-2xl"></i>
-                <h5 class="font-bold text-sm uppercase text-slate-700">Garantía Total</h5>
-            </div>
-        </div>
-    </section>
 
     <div id="filter-section" class="sticky top-[73px] bg-slate-50/95 backdrop-blur-sm z-40 py-6 border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4">
@@ -108,110 +90,597 @@
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
-                <div class="absolute top-4 left-4 z-10 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nuevo</div>
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Táctica">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M1_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Ejecutiva Tech">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Mochila Táctica Alpha', 'Ref: DEMO-M1', 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                        <button onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M1_1.jfif', 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Uso Rudo</div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Táctica "Alpha"</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Diseñada para máxima resistencia. Materiales simulados: Poliéster 1200D con costuras reforzadas.</p>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Ejecutiva Tech</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Compartimento acolchado para laptop y diseño ergonómico de alta gama.</p>
                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-M1</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Táctica Alpha', 'Ref: DEMO-M1', 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M1</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M1_1.jfif', 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Urbana">
-                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Backpack Urban Slim', 'Ref: DEMO-M2', 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M2_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Industrial Uso Rudo">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Industrial Uso Rudo', 'REF: BCO-M2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M2_1.jfif', 'Fabricada en lona reforzada con costuras de seguridad para herramientas.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Ejecutivo</div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Backpack Urban Slim</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Estilo minimalista para el profesional moderno. Compartimento para laptop (simulado).</p>
-                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-M2</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Backpack Urban Slim', 'Ref: DEMO-M2', 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Industrial Uso Rudo</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Fabricada en lona reforzada con costuras de seguridad para herramientas.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M2</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Industrial Uso Rudo', 'REF: BCO-M2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M2_1.jfif', 'Fabricada en lona reforzada con costuras de seguridad para herramientas.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
 
-            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera">
-                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Hielera Industrial 24L', 'Ref: DEMO-H1', 'https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M3_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Backpack Urbana Minimal">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Backpack Urbana Minimal', 'REF: BCO-M3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M3_1.jfif', 'Diseño ligero de un solo compartimento con acabado estético limpio.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Térmicos</div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Backpack Urbana Minimal</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Diseño ligero de un solo compartimento con acabado estético limpio.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M3</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Backpack Urbana Minimal', 'REF: BCO-M3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M3_1.jfif', 'Diseño ligero de un solo compartimento con acabado estético limpio.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M4_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Repartidor Térmica">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Repartidor Térmica', 'REF: BCO-M4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M4_1.jfif', 'Forro interno aislante y estructura rígida para transporte de productos.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Repartidor Térmica</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Forro interno aislante y estructura rígida para transporte de productos.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M4</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Repartidor Térmica', 'REF: BCO-M4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M4_1.jfif', 'Forro interno aislante y estructura rígida para transporte de productos.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M5_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Security Pack Antirrobo">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Security Pack Antirrobo', 'REF: BCO-M5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M5_1.jfif', 'Cremalleras ocultas y material resistente a cortes para protección máxima.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Security Pack Antirrobo</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Cremalleras ocultas y material resistente a cortes para protección máxima.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M5</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Security Pack Antirrobo', 'REF: BCO-M5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M5_1.jfif', 'Cremalleras ocultas y material resistente a cortes para protección máxima.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M6_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Deportiva Fitness">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Deportiva Fitness', 'REF: BCO-M6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M6_1.jfif', 'Incluye compartimento ventilado para calzado y materiales transpirables.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Deportiva Fitness</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Incluye compartimento ventilado para calzado y materiales transpirables.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M6</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Deportiva Fitness', 'REF: BCO-M6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M6_1.jfif', 'Incluye compartimento ventilado para calzado y materiales transpirables.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M7_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Escolar Institucional">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Escolar Institucional', 'REF: BCO-M7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M7_1.jfif', 'Capacidad expandible y refuerzo en base, ideal para carga pesada de libros.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Escolar Institucional</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Capacidad expandible y refuerzo en base, ideal para carga pesada de libros.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M7</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Escolar Institucional', 'REF: BCO-M7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M7_1.jfif', 'Capacidad expandible y refuerzo en base, ideal para carga pesada de libros.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M8_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Crossbody Táctica">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Crossbody Táctica', 'REF: BCO-M8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M8_1.jfif', 'Mochila de una sola correa con sistema de anclaje externo para accesorios.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Crossbody Táctica</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Mochila de una sola correa con sistema de anclaje externo para accesorios.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M8</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Crossbody Táctica', 'REF: BCO-M8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M8_1.jfif', 'Mochila de una sola correa con sistema de anclaje externo para accesorios.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M9_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Impermeable Dry-Bag">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Impermeable Dry-Bag', 'REF: BCO-M9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M9_1.jfif', 'Sellado por alta frecuencia que garantiza 100% de protección contra lluvia.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Impermeable Dry-Bag</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Sellado por alta frecuencia que garantiza 100% de protección contra lluvia.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M9</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Impermeable Dry-Bag', 'REF: BCO-M9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M9_1.jfif', 'Sellado por alta frecuencia que garantiza 100% de protección contra lluvia.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M10_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Premium Sintético">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Premium Sintético', 'REF: BCO-M10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M10_1.jfif', 'Acabados artesanales en materiales sintéticos de lujo con logo grabado.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Premium Sintético</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Acabados artesanales en materiales sintéticos de lujo con logo grabado.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M10</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Premium Sintético', 'REF: BCO-M10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M10_1.jfif', 'Acabados artesanales en materiales sintéticos de lujo con logo grabado.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M11_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Modelo M11">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Modelo M11', 'REF: BCO-M11', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M11_1.jfif', 'Descripción específica para el modelo 11.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Modelo M11</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Descripción específica para el modelo 11.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M11</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Modelo M11', 'REF: BCO-M11', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M11_1.jfif', 'Descripción específica para el modelo 11.')">Detalles &rarr;</span>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M12_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Modelo M12">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Modelo M12', 'REF: BCO-M12', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M12_1.jfif', 'Descripción específica para el modelo 12.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Modelo M12</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Descripción específica para el modelo 12.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M12</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Modelo M12', 'REF: BCO-M12', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M12_1.jfif', 'Descripción específica para el modelo 12.')">Detalles &rarr;</span>
+                    </div>
+                 </div>
+            </div>
+
+            <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M13_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Modelo M13">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Modelo M13', 'REF: BCO-M13', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M13_1.jfif', 'Descripción específica para el modelo 13.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Modelo M13</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Descripción específica para el modelo 13.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-M13</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Modelo M13', 'REF: BCO-M13', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/M13_1.jfif', 'Descripción específica para el modelo 13.')">Detalles &rarr;</span>
+                    </div>
+                 </div>
+            </div>
+
+            
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H1_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Industrial 24L">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Industrial 24L', 'REF: BCO-H1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H1_1.jfif', 'Aislamiento superior y exterior resistente a la abrasión para jornadas largas.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
                     <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Industrial 24L</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Ideal para mantener la cadena de frío. Revestimiento PVC de alta durabilidad.</p>
-                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-H1</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Industrial 24L', 'Ref: DEMO-H1', 'https://images.unsplash.com/photo-1621252179027-94459d27d3ee?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Aislamiento superior y exterior resistente a la abrasión para jornadas largas.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H1</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Industrial 24L', 'REF: BCO-H1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H1_1.jfif', 'Aislamiento superior y exterior resistente a la abrasión para jornadas largas.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                    <img src="https://images.unsplash.com/photo-1595246140625-573b715d1128?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Bolsa Térmica">
-                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Bolsa Térmica Fresh', 'Ref: DEMO-H2', 'https://images.unsplash.com/photo-1595246140625-573b715d1128?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H2_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Bolsa Térmica Fresh">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Bolsa Térmica Fresh', 'REF: BCO-H2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H2_1.jfif', 'Ideal para transporte personal, materiales fáciles de limpiar.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Personal</div>
                     <h3 class="font-bold text-lg text-slate-900 mb-2">Bolsa Térmica "Fresh"</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Compacta y ligera. Interior aluminizado para conservación óptima.</p>
-                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-H2</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Bolsa Térmica Fresh', 'Ref: DEMO-H2', 'https://images.unsplash.com/photo-1595246140625-573b715d1128?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Ideal para transporte personal, materiales fáciles de limpiar.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H2</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Bolsa Térmica Fresh', 'REF: BCO-H2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H2_1.jfif', 'Ideal para transporte personal, materiales fáciles de limpiar.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H3_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Rígida de Trabajo">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Rígida de Trabajo', 'REF: BCO-H3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H3_1.jfif', 'Estructura indeformable con forro térmico grueso y correa ajustable.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Rígida de Trabajo</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Estructura indeformable con forro térmico grueso y correa ajustable.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H3</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Rígida de Trabajo', 'REF: BCO-H3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H3_1.jfif', 'Estructura indeformable con forro térmico grueso y correa ajustable.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H4_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Hielera Delivery">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Mochila Hielera Delivery', 'REF: BCO-H4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H4_1.jfif', 'Diseño tipo mochila para repartidores, gran capacidad térmica.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Hielera Delivery</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Diseño tipo mochila para repartidores, gran capacidad térmica.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H4</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Hielera Delivery', 'REF: BCO-H4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H4_1.jfif', 'Diseño tipo mochila para repartidores, gran capacidad térmica.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H5_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Lonchera Térmica Ejecutiva">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Lonchera Térmica Ejecutiva', 'REF: BCO-H5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H5_1.jfif', 'Apariencia de maletín profesional con interior 100% aislante.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Lonchera Térmica Ejecutiva</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Apariencia de maletín profesional con interior 100% aislante.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H5</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Lonchera Térmica Ejecutiva', 'REF: BCO-H5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H5_1.jfif', 'Apariencia de maletín profesional con interior 100% aislante.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H6_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Plegable Familiar">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Plegable Familiar', 'REF: BCO-H6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H6_1.jfif', 'Optimiza espacio al guardarse, capacidad extendida para salidas grupales.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Plegable Familiar</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Optimiza espacio al guardarse, capacidad extendida para salidas grupales.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H6</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Plegable Familiar', 'REF: BCO-H6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H6_1.jfif', 'Optimiza espacio al guardarse, capacidad extendida para salidas grupales.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H7_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Cilíndrica Bebidas">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Cilíndrica Bebidas', 'REF: BCO-H7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H7_1.jfif', 'Formato tubular ideal para transportar botellas o latas verticalmente.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Cilíndrica Bebidas</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Formato tubular ideal para transportar botellas o latas verticalmente.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H7</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Cilíndrica Bebidas', 'REF: BCO-H7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H7_1.jfif', 'Formato tubular ideal para transportar botellas o latas verticalmente.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H8_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Médica/Laboratorio">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Médica/Laboratorio', 'REF: BCO-H8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H8_1.jfif', 'Control térmico estricto y recubrimiento antibacteriano interno.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Médica Controlada</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Control térmico estricto y recubrimiento antibacteriano interno.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H8</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Médica Controlada', 'REF: BCO-H8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H8_1.jfif', 'Control térmico estricto y recubrimiento antibacteriano interno.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H9_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Bolso Térmico Picnic">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Bolso Térmico Picnic', 'REF: BCO-H9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H9_1.jfif', 'Estética casual con compartimentos secos para cubiertos y servilletas.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Bolso Térmico Picnic</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Estética casual con compartimentos secos para cubiertos y servilletas.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H9</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Bolso Térmico Picnic', 'REF: BCO-H9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H9_1.jfif', 'Estética casual con compartimentos secos para cubiertos y servilletas.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item hieleras product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-cyan-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hieleras</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H10_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Hielera Uso Rudo Extremo">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Hielera Uso Rudo Extremo', 'REF: BCO-H10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H10_1.jfif', 'Fondo de PVC reforzado y lona de alto calibre para obra o campo.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Hielera Uso Rudo Extremo</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Fondo de PVC reforzado y lona de alto calibre para obra o campo.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-H10</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Hielera Uso Rudo Extremo', 'REF: BCO-H10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/H10_1.jfif', 'Fondo de PVC reforzado y lona de alto calibre para obra o campo.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                     <img src="https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta">
-                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Carpeta Premium Piel', 'Ref: DEMO-C1', 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C1_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Premium Ortiz">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Premium Ortiz', 'REF: BCO-C1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C1_1.jfif', 'Materiales de exhibición. Cosido reforzado en perímetro para mayor elegancia.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Oficina</div>
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Premium Piel</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Acabado elegante tipo piel. Cosido reforzado en perímetro.</p>
-                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-C1</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Premium Piel', 'Ref: DEMO-C1', 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Premium Ortiz</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Materiales de exhibición. Cosido reforzado en perímetro para mayor elegancia.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C1</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Premium Ortiz', 'REF: BCO-C1', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C1_1.jfif', 'Materiales de exhibición. Cosido reforzado en perímetro para mayor elegancia.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
 
             <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
                 <div class="h-72 bg-slate-100 overflow-hidden relative">
-                     <img src="https://images.unsplash.com/photo-1512418490979-92798cec1380?auto=format&fit=crop&q=80&w=600" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Folder">
-                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Folder Organizador A4', 'Ref: DEMO-C2', 'https://images.unsplash.com/photo-1512418490979-92798cec1380?auto=format&fit=crop&q=80&w=600')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C2_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Folder Organizador A4">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Folder Organizador A4', 'REF: BCO-C2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C2_1.jfif', 'Estructura rígida con forro interior protector y divisiones.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
                     </div>
                 </div>
                 <div class="p-6">
-                    <div class="text-xs text-slate-400 mb-1 uppercase tracking-wider font-semibold">Eventos</div>
                     <h3 class="font-bold text-lg text-slate-900 mb-2">Folder Organizador A4</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Práctico y ligero. Incluye broche magnético y porta bolígrafo.</p>
-                     <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: DEMO-C2</span>
-                        <span class="text-blue-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Folder Organizador A4', 'Ref: DEMO-C2', 'https://images.unsplash.com/photo-1512418490979-92798cec1380?auto=format&fit=crop&q=80&w=600')">Ver detalles &rarr;</span>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Estructura rígida con forro interior protector y divisiones.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C2</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Folder Organizador A4', 'REF: BCO-C2', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C2_1.jfif', 'Estructura rígida con forro interior protector y divisiones.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C3_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Ejecutiva con Cierre">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Ejecutiva con Cierre', 'REF: BCO-C3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C3_1.jfif', 'Cremallera perimetral para máxima seguridad de documentos confidenciales.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Ejecutiva con Cierre</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Cremallera perimetral para máxima seguridad de documentos confidenciales.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C3</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Ejecutiva con Cierre', 'REF: BCO-C3', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C3_1.jfif', 'Cremallera perimetral para máxima seguridad de documentos confidenciales.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C4_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Portafolio de Congresos">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Portafolio de Congresos', 'REF: BCO-C4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C4_1.jfif', 'Incluye block de notas, tarjetero y espacio para bolígrafo.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Portafolio de Congresos</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Incluye block de notas, tarjetero y espacio para bolígrafo.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C4</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Portafolio de Congresos', 'REF: BCO-C4', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C4_1.jfif', 'Incluye block de notas, tarjetero y espacio para bolígrafo.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C5_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Argollas Metálicas">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Argollas Metálicas', 'REF: BCO-C5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C5_1.jfif', 'Mecanismo de 3 aros de alta resistencia para archivo muerto o escolar.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Argollas Metálicas</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Mecanismo de 3 aros de alta resistencia para archivo muerto o escolar.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C5</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Argollas Metálicas', 'REF: BCO-C5', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C5_1.jfif', 'Mecanismo de 3 aros de alta resistencia para archivo muerto o escolar.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C6_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Presentación Piel">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Presentación Piel', 'REF: BCO-C6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C6_1.jfif', 'Curpiel de alta calidad, ideal para contratos y firmas importantes.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Presentación Piel</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Curpiel de alta calidad, ideal para contratos y firmas importantes.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C6</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Presentación Piel', 'REF: BCO-C6', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C6_1.jfif', 'Curpiel de alta calidad, ideal para contratos y firmas importantes.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C7_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Porta Menú Restaurante">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Porta Menú Restaurante', 'REF: BCO-C7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C7_1.jfif', 'Cubiertas repelentes al agua y mica protectora interna.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Porta Menú Restaurante</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Cubiertas repelentes al agua y mica protectora interna.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C7</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Porta Menú Restaurante', 'REF: BCO-C7', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C7_1.jfif', 'Cubiertas repelentes al agua y mica protectora interna.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C8_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Portadiplomas">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Portadiplomas', 'REF: BCO-C8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C8_1.jfif', 'Acojinada, con esquineros de tela internos para sujetar documentos.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Portadiplomas</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Acojinada, con esquineros de tela internos para sujetar documentos.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C8</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Portadiplomas', 'REF: BCO-C8', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C8_1.jfif', 'Acojinada, con esquineros de tela internos para sujetar documentos.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C9_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Notarial">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Notarial', 'REF: BCO-C9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C9_1.jfif', 'Formato oficio, doble cara con solapa extra ancha.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Notarial</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Formato oficio, doble cara con solapa extra ancha.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C9</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Notarial', 'REF: BCO-C9', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C9_1.jfif', 'Formato oficio, doble cara con solapa extra ancha.')">Detalles &rarr;</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-item carpetas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
+                <div class="absolute top-4 left-4 z-10 bg-slate-800 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Carpetas</div>
+                <div class="h-72 bg-slate-100 overflow-hidden relative">
+                    <img src="C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C10_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Carpeta Vinil Económica">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <button onclick="openModal('Carpeta Vinil Económica', 'REF: BCO-C10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C10_1.jfif', 'Sellada en alta frecuencia, ideal para promocionales en volumen.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Carpeta Vinil Económica</h3>
+                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Sellada en alta frecuencia, ideal para promocionales en volumen.</p>
+                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+                        <span class="text-xs font-mono text-slate-400">REF: BCO-C10</span>
+                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Carpeta Vinil Económica', 'REF: BCO-C10', 'C:/Users/user/Desktop/Bolsas y Carpetas Ortiz/img/C10_1.jfif', 'Sellada en alta frecuencia, ideal para promocionales en volumen.')">Detalles &rarr;</span>
                     </div>
                 </div>
             </div>
@@ -222,43 +691,43 @@
     <footer class="bg-slate-900 text-slate-300 py-16 px-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 border-b border-slate-800 pb-12">
             <div>
-                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Sobre la Muestra</h4>
-                <p class="text-sm leading-relaxed mb-4">Esta plataforma es un prototipo funcional diseñado para validar la experiencia de usuario y la arquitectura de información antes de la implementación final.</p>
+                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Bolsas y Carpetas Ortiz</h4>
+                <p class="text-sm leading-relaxed mb-4">Esta plataforma es una exhibición técnica de nuestros productos manufacturados. Calidad y detalle en cada costura.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-white"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-600 transition text-white"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-600 transition text-white"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-orange-600 transition text-white"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
             <div>
-                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Enlaces Rápidos</h4>
+                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Información</h4>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="#" class="hover:text-blue-400 transition">Catálogo Completo</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Solicitar Cotización (Demo)</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Términos de Servicio</a></li>
-                    <li><a href="#" class="hover:text-blue-400 transition">Aviso de Privacidad</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition">Catálogo Completo</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition">Proyectos Especiales</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition">Tiempos de Producción</a></li>
+                    <li><a href="#" class="hover:text-orange-400 transition">Aviso de Privacidad</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Contacto Simulado</h4>
+                <h4 class="text-white text-lg font-bold mb-4 uppercase tracking-wider">Contacto Directo</h4>
                 <ul class="space-y-3 text-sm">
                     <li class="flex items-start gap-3">
-                        <i class="fa-solid fa-location-dot mt-1 text-blue-500"></i>
-                        <span>Calle Ficticia 123, Parque Industrial<br>Ciudad de México, CP 00000</span>
+                        <i class="fa-solid fa-location-dot mt-1 text-orange-500"></i>
+                        <span>Atención personalizada<br>Ciudad de México</span>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-phone text-blue-500"></i>
-                        <span>+52 (55) 1234 5678</span>
+                        <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i>
+                        <a href="https://wa.me/525526737861" target="_blank" class="hover:text-white transition">+52 55 2673 7861</a>
                     </li>
                     <li class="flex items-center gap-3">
-                        <i class="fa-solid fa-envelope text-blue-500"></i>
-                        <span>contacto@empresa-demo.com</span>
+                        <i class="fa-solid fa-envelope text-orange-500"></i>
+                        <span>contacto@bolsasycarpetasortiz.com</span>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-            <p>&copy; 2026 Soluciones Textiles (Demo). Todos los derechos reservados.</p>
-            <p class="mt-2 md:mt-0 italic">Desarrollado para fines de demostración.</p>
+            <p>&copy; 2026 Bolsas y Carpetas Ortiz. Todos los derechos reservados.</p>
+            <p class="mt-2 md:mt-0 italic tracking-widest uppercase">Manufactura Mexicana</p>
         </div>
     </footer>
 
@@ -270,21 +739,18 @@
                 </div>
                 <div class="p-8 flex flex-col justify-center">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-bold text-blue-600 border border-blue-100 bg-blue-50 px-2 py-1 rounded uppercase">Disponible</span>
+                        <span class="text-[10px] font-bold text-orange-600 border border-orange-100 bg-orange-50 px-2 py-1 rounded uppercase">Exhibición BCO</span>
                         <button onclick="closeModal()" class="text-slate-400 hover:text-red-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
                     </div>
                     
-                    <h2 id="modal-title" class="text-2xl font-extrabold text-slate-900 mb-2 brand-font leading-tight">Título del Producto</h2>
+                    <h2 id="modal-title" class="text-2xl font-extrabold text-slate-900 mb-2 brand-font leading-tight">Título</h2>
                     <p id="modal-ref" class="text-xs text-slate-500 font-mono mb-4">REF: 000</p>
-                    
-                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                        Esta es una descripción simulada. En la versión final, aquí aparecerán las especificaciones técnicas reales: dimensiones, materiales exactos, colores disponibles y tiempos de entrega estimados.
-                    </p>
+                    <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6">Descripción.</p>
                     
                     <div class="space-y-3">
-                        <button class="w-full bg-slate-900 text-white py-3 rounded-lg font-bold text-sm hover:bg-blue-600 transition shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-regular fa-file-pdf"></i> Descargar Ficha (Simulado)
-                        </button>
+                        <a id="modal-whatsapp-btn" href="#" target="_blank" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-sm hover:bg-green-700 transition shadow-lg flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Consultar por WhatsApp
+                        </a>
                         <button onclick="closeModal()" class="w-full bg-transparent border border-slate-200 text-slate-600 py-3 rounded-lg font-bold text-sm hover:bg-slate-50 transition">
                             Cerrar Ventana
                         </button>
@@ -300,23 +766,18 @@
             const items = document.querySelectorAll('.product-item');
             const btns = document.querySelectorAll('.filter-btn');
 
-            // Resetear estilos de botones
             btns.forEach(b => {
                 b.classList.remove('bg-slate-900', 'text-white', 'shadow-lg', 'ring-2', 'ring-slate-900', 'ring-offset-2');
                 b.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
             });
             
-            // Activar botón seleccionado
             btn.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
             btn.classList.add('bg-slate-900', 'text-white', 'shadow-lg', 'ring-2', 'ring-slate-900', 'ring-offset-2');
 
-            // Filtrar items
             items.forEach(item => {
                 item.classList.remove('fade-in');
-                
                 if (category === 'all' || item.classList.contains(category)) {
                     item.classList.remove('hidden');
-                    // Forzar reflow para reiniciar animación
                     void item.offsetWidth; 
                     item.classList.add('fade-in');
                 } else {
@@ -325,49 +786,43 @@
             });
         }
 
-        // Lógica de Modal Dinámico
+        // Lógica de Modal (Actualizada para recibir la imagen correctamente)
         const modal = document.getElementById('product-modal');
         const modalContent = document.getElementById('modal-content');
-        const modalTitle = document.getElementById('modal-title');
-        const modalRef = document.getElementById('modal-ref');
-        const modalImg = document.getElementById('modal-img');
 
-        function openModal(title, ref, imgSrc) {
-            // Cargar datos dinámicos
-            modalTitle.textContent = title;
-            modalRef.textContent = ref;
-            modalImg.src = imgSrc;
+        function openModal(title, ref, imgSrc, desc) {
+            document.getElementById('modal-title').textContent = title;
+            document.getElementById('modal-ref').textContent = ref;
+            
+            // Asigna la ruta exacta de la imagen al modal
+            document.getElementById('modal-img').src = imgSrc;
+            
+            document.getElementById('modal-desc').textContent = desc;
 
-            // Mostrar modal con animación
+            const telefono = "525526737861";
+            const mensaje = `Hola, me interesa solicitar información sobre el producto Ortiz:\n\n*${title}*\n(${ref})`;
+            document.getElementById('modal-whatsapp-btn').href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+
             modal.classList.remove('hidden');
-            // Timeout pequeño para permitir que la transición CSS ocurra
             setTimeout(() => {
                 modal.classList.remove('opacity-0');
                 modalContent.classList.remove('scale-95');
                 modalContent.classList.add('scale-100');
             }, 10);
-            
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
-            // Ocultar con animación inversa
             modal.classList.add('opacity-0');
             modalContent.classList.remove('scale-100');
             modalContent.classList.add('scale-95');
-
             setTimeout(() => {
                 modal.classList.add('hidden');
                 document.body.style.overflow = 'auto';
-            }, 300); // Esperar a que termine la transición
+            }, 300);
         }
 
-        // Cerrar modal al dar click fuera
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                closeModal();
-            }
-        });
+        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
     </script>
 </body>
 </html>
