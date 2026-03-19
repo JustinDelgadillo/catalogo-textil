@@ -768,34 +768,61 @@
     </div>
 </footer>
 
-    <div id="product-modal" class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
-        <div class="bg-white max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                <div class="h-64 md:h-auto bg-slate-100 relative">
-                    <img id="modal-img" src="" class="absolute inset-0 w-full h-full object-cover" alt="Detalle">
+   <div id="product-modal" class="fixed inset-0 z-[100] hidden bg-slate-900/90 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity duration-300 opacity-0">
+    <div class="bg-white max-w-4xl w-full rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300" id="modal-content">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+            <div class="h-80 md:h-[500px] bg-slate-50 relative group">
+                <img id="modal-img" src="" 
+                     onclick="openLightbox()" 
+                     class="w-full h-full object-contain cursor-zoom-in transition-all duration-300" 
+                     alt="Detalle del producto">
+                
+                <button onclick="changeImage(-1, event)" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="changeImage(1, event)" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-slate-800 p-3 rounded-full shadow-lg transition-all opacity-0 group-hover:opacity-100">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div id="image-counter" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white text-[10px] px-3 py-1 rounded-full font-mono">
+                    1 / 1
                 </div>
-                <div class="p-8 flex flex-col justify-center">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="text-[10px] font-bold text-orange-600 border border-orange-100 bg-orange-50 px-2 py-1 rounded uppercase">Exhibición BCO</span>
-                        <button onclick="closeModal()" class="text-slate-400 hover:text-red-500 transition"><i class="fa-solid fa-xmark text-xl"></i></button>
-                    </div>
-                    
-                    <h2 id="modal-title" class="text-2xl font-extrabold text-slate-900 mb-2 brand-font leading-tight">Título</h2>
-                    <p id="modal-ref" class="text-xs text-slate-500 font-mono mb-4">REF: 000</p>
-                    <p id="modal-desc" class="text-slate-600 text-sm leading-relaxed mb-6">Descripción.</p>
-                    
-                    <div class="space-y-3">
-                        <a id="modal-whatsapp-btn" href="#" target="_blank" class="w-full bg-green-600 text-white py-3 rounded-lg font-bold text-sm hover:bg-green-700 transition shadow-lg flex items-center justify-center gap-2">
-                            <i class="fa-brands fa-whatsapp text-lg"></i> Consultar por WhatsApp
-                        </a>
-                        <button onclick="closeModal()" class="w-full bg-transparent border border-slate-200 text-slate-600 py-3 rounded-lg font-bold text-sm hover:bg-slate-50 transition">
-                            Cerrar Ventana
-                        </button>
-                    </div>
+            </div>
+
+            <div class="p-8 md:p-12 flex flex-col justify-center bg-white">
+                <div class="flex justify-between items-start mb-6">
+                    <span class="text-[10px] font-bold text-orange-600 border border-orange-100 bg-orange-50 px-2 py-1 rounded uppercase tracking-wider">Exhibición BCO</span>
+                    <button onclick="closeModal()" class="text-slate-400 hover:text-red-500 transition-colors">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+                
+                <h2 id="modal-title" class="text-3xl font-extrabold text-slate-900 mb-2 brand-font leading-tight">Título</h2>
+                <p id="modal-ref" class="text-sm text-slate-400 font-mono mb-6">REF: 000</p>
+                
+                <div class="h-px bg-slate-100 w-full mb-6"></div>
+                
+                <p id="modal-desc" class="text-slate-600 text-base leading-relaxed mb-8">Descripción.</p>
+                
+                <div class="space-y-4">
+                    <a id="modal-whatsapp-btn" href="#" target="_blank" class="w-full bg-green-600 text-white py-4 rounded-xl font-bold text-sm hover:bg-green-700 transition-all shadow-lg shadow-green-200 flex items-center justify-center gap-3">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> SOLICITAR COTIZACIÓN
+                    </a>
+                    <button onclick="closeModal()" class="w-full bg-slate-50 text-slate-500 py-3 rounded-xl font-semibold text-xs hover:bg-slate-100 transition-all">
+                        Cerrar Ventana
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
+<div id="lightbox" class="fixed inset-0 z-[110] hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4 transition-opacity duration-300 opacity-0 cursor-zoom-out" onclick="closeLightbox()">
+    <button onclick="closeLightbox()" class="absolute top-8 right-8 text-white/50 hover:text-white transition-colors">
+        <i class="fa-solid fa-xmark text-4xl"></i>
+    </button>
+    <img id="lightbox-img" src="" class="max-w-full max-h-[90vh] object-contain shadow-2xl transform transition-transform duration-300">
+</div>
 
     <script>
         // Lógica de Filtros
