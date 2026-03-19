@@ -93,22 +93,35 @@
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
-                <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
-                <div class="h-72 bg-slate-100 overflow-hidden relative">
-                    <img src="M1_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Ejecutiva Tech">
-                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                        <button onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', ['M1_1.jfif', 'M1_2.jfif', 'M1_3.jfif'], 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')" class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">Vista Rápida</button>
-                    </div>
-                </div>
-                <div class="p-6">
-                    <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Ejecutiva Tech</h3>
-                    <p class="text-slate-500 text-sm mb-4 line-clamp-2">Compartimento acolchado para laptop y diseño ergonómico de alta gama.</p>
-                    <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
-                        <span class="text-xs font-mono text-slate-400">REF: BCO-M1</span>
-                        <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', ['M1_1.jfif'], 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')">Detalles &rarr;</span>
-                    </div>
-                </div>
-            </div>
+    <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        Mochilas
+    </div>
+
+    <div class="h-72 bg-slate-100 overflow-hidden relative">
+        <img src="M1_1.jfif" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" alt="Mochila Ejecutiva Tech">
+        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+            <button onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', ['M1_1.jfif', 'M1_2.jfif', 'M1_3.jfif'], 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')" 
+                    class="bg-white text-slate-900 px-6 py-2 rounded-full font-bold text-sm transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                Vista Rápida
+            </button>
+        </div>
+    </div>
+
+    <div class="p-6">
+        <h3 class="font-bold text-lg text-slate-900 mb-2">Mochila Ejecutiva Tech</h3>
+        <p class="text-slate-500 text-sm mb-4 line-clamp-2">
+            Compartimento acolchado para laptop y diseño ergonómico de alta gama.
+        </p>
+        
+        <div class="border-t border-slate-100 pt-4 flex justify-between items-center">
+            <span class="text-xs font-mono text-slate-400">REF: BCO-M1</span>
+            <span class="text-orange-600 text-sm font-bold cursor-pointer hover:underline" 
+                  onclick="openModal('Mochila Ejecutiva Tech', 'REF: BCO-M1', ['M1_1.jfif', 'M1_2.jfif', 'M1_3.jfif'], 'Compartimento acolchado para laptop y diseño ergonómico de alta gama.')">
+                Detalles &rarr;
+            </span>
+        </div>
+    </div>
+</div>
 
             <div class="product-item mochilas product-card bg-white rounded-2xl border border-slate-100 overflow-hidden group relative">
                 <div class="absolute top-4 left-4 z-10 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Mochilas</div>
@@ -810,43 +823,95 @@
             });
         }
 
-        // Lógica de Modal (Actualizada para recibir la imagen correctamente)
-        const modal = document.getElementById('product-modal');
-        const modalContent = document.getElementById('modal-content');
+      // Lógica de Modal, Carrusel y Lightbox
+let currentImages = [];
+let currentIndex = 0;
+const modal = document.getElementById('product-modal');
+const modalContent = document.getElementById('modal-content');
 
-        function openModal(title, ref, imgSrc, desc) {
-            document.getElementById('modal-title').textContent = title;
-            document.getElementById('modal-ref').textContent = ref;
-            
-            // Asigna la ruta exacta de la imagen al modal
-            document.getElementById('modal-img').src = imgSrc;
-            
-            document.getElementById('modal-desc').textContent = desc;
+function openModal(title, ref, images, desc) {
+    currentImages = images;
+    currentIndex = 0;
 
-            const telefono = "525526737861";
-            const mensaje = `Hola, me interesa solicitar información sobre el producto Ortiz:\n\n*${title}*\n(${ref})`;
-            document.getElementById('modal-whatsapp-btn').href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    document.getElementById('modal-title').textContent = title;
+    document.getElementById('modal-ref').textContent = ref;
+    document.getElementById('modal-desc').textContent = desc;
 
-            modal.classList.remove('hidden');
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modalContent.classList.remove('scale-95');
-                modalContent.classList.add('scale-100');
-            }, 10);
-            document.body.style.overflow = 'hidden';
-        }
+    // Configuración de WhatsApp
+    const telefono = "525526737861";
+    const mensaje = `Hola, me interesa solicitar información sobre el producto Ortiz:\n\n*${title}*\n(${ref})`;
+    document.getElementById('modal-whatsapp-btn').href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
-        function closeModal() {
-            modal.classList.add('opacity-0');
-            modalContent.classList.remove('scale-100');
-            modalContent.classList.add('scale-95');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }, 300);
-        }
+    updateModalImage();
 
-        modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+    // Animación de apertura
+    modal.classList.remove('hidden');
+    setTimeout(() => {
+        modal.classList.remove('opacity-0');
+        modalContent.classList.remove('scale-95');
+        modalContent.classList.add('scale-100');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function updateModalImage() {
+    const imgElement = document.getElementById('modal-img');
+    const counter = document.getElementById('image-counter');
+    
+    if (imgElement) imgElement.src = currentImages[currentIndex];
+    if (counter) counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+}
+
+function changeImage(direction) {
+    currentIndex += direction;
+    if (currentIndex >= currentImages.length) currentIndex = 0;
+    if (currentIndex < 0) currentIndex = currentImages.length - 1;
+    updateModalImage();
+}
+
+function closeModal() {
+    modal.classList.add('opacity-0');
+    modalContent.classList.remove('scale-100');
+    modalContent.classList.add('scale-95');
+    setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }, 300);
+}
+
+// Funciones de Pantalla Completa (Lightbox)
+function openLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    if (lightbox && lightboxImg) {
+        lightboxImg.src = currentImages[currentIndex];
+        lightbox.classList.remove('hidden');
+        setTimeout(() => lightbox.classList.remove('opacity-0'), 10);
+    }
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+        lightbox.classList.add('opacity-0');
+        setTimeout(() => lightbox.classList.add('hidden'), 300);
+    }
+}
+
+// Eventos de cierre y teclado
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === "Escape") {
+        closeLightbox();
+        closeModal();
+    }
+    // Navegación por flechas si el modal está abierto
+    if (!modal.classList.contains('hidden')) {
+        if (e.key === "ArrowRight") changeImage(1);
+        if (e.key === "ArrowLeft") changeImage(-1);
+    }
+});
     </script>
 </body>
 </html>
