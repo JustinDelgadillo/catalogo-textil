@@ -822,17 +822,25 @@
                 }
             });
         }
-
-      // Lógica de Modal, Carrusel y Lightbox
+// Lógica de Modal, Carrusel y Lightbox
 let currentImages = [];
 let currentIndex = 0;
 const modal = document.getElementById('product-modal');
 const modalContent = document.getElementById('modal-content');
 
+/**
+ * Abre el modal y configura el carrusel
+ * @param {string} title - Nombre del producto
+ * @param {string} ref - Referencia/Modelo
+ * @param {string|string[]} images - Una imagen o un array de imágenes
+ * @param {string} desc - Descripción del producto
+ */
 function openModal(title, ref, images, desc) {
-    currentImages = images;
+    // Convertir a array si solo llega una imagen como string
+    currentImages = Array.isArray(images) ? images : [images];
     currentIndex = 0;
 
+    // Asignar textos básicos
     document.getElementById('modal-title').textContent = title;
     document.getElementById('modal-ref').textContent = ref;
     document.getElementById('modal-desc').textContent = desc;
@@ -842,9 +850,10 @@ function openModal(title, ref, images, desc) {
     const mensaje = `Hola, me interesa solicitar información sobre el producto Ortiz:\n\n*${title}*\n(${ref})`;
     document.getElementById('modal-whatsapp-btn').href = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
+    // Cargar la primera imagen y actualizar contador
     updateModalImage();
 
-    // Animación de apertura
+    // Animación de apertura (Tu lógica original)
     modal.classList.remove('hidden');
     setTimeout(() => {
         modal.classList.remove('opacity-0');
@@ -858,11 +867,21 @@ function updateModalImage() {
     const imgElement = document.getElementById('modal-img');
     const counter = document.getElementById('image-counter');
     
-    if (imgElement) imgElement.src = currentImages[currentIndex];
-    if (counter) counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+    if (imgElement) {
+        imgElement.src = currentImages[currentIndex];
+    }
+    
+    if (counter) {
+        counter.textContent = `${currentIndex + 1} / ${currentImages.length}`;
+        // Ocultar el contador si solo hay una imagen
+        counter.style.display = currentImages.length > 1 ? 'block' : 'none';
+    }
 }
 
-function changeImage(direction) {
+function changeImage(direction, event) {
+    // IMPORTANTE: Detiene la propagación para que el modal no se cierre al tocar las flechas
+    if (event) event.stopPropagation();
+    
     currentIndex += direction;
     if (currentIndex >= currentImages.length) currentIndex = 0;
     if (currentIndex < 0) currentIndex = currentImages.length - 1;
@@ -898,15 +917,18 @@ function closeLightbox() {
     }
 }
 
-// Eventos de cierre y teclado
-modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+// Evento para cerrar haciendo clic fuera del contenido
+modal.addEventListener('click', (e) => { 
+    if (e.target === modal) closeModal(); 
+});
 
+// Control por teclado (Esc para cerrar, Flechas para navegar)
 document.addEventListener('keydown', (e) => {
     if (e.key === "Escape") {
         closeLightbox();
         closeModal();
     }
-    // Navegación por flechas si el modal está abierto
+    
     if (!modal.classList.contains('hidden')) {
         if (e.key === "ArrowRight") changeImage(1);
         if (e.key === "ArrowLeft") changeImage(-1);
